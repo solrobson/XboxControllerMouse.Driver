@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxControllerMouse.Driver", "XboxControllerMouse.Driver\XboxControllerMouse.Driver.csproj", "{11C0F2CC-4C83-4AFD-B8B1-0DBB152FC123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XboxControllerMouse.Library", "XboxControllerMouse.Library\XboxControllerMouse.Library.csproj", "{EC5DCBB4-0163-4728-BB25-F81FD63F66EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11C0F2CC-4C83-4AFD-B8B1-0DBB152FC123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C0F2CC-4C83-4AFD-B8B1-0DBB152FC123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C0F2CC-4C83-4AFD-B8B1-0DBB152FC123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C0F2CC-4C83-4AFD-B8B1-0DBB152FC123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5DCBB4-0163-4728-BB25-F81FD63F66EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5DCBB4-0163-4728-BB25-F81FD63F66EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5DCBB4-0163-4728-BB25-F81FD63F66EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5DCBB4-0163-4728-BB25-F81FD63F66EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B72C794B-1BCA-4DAD-9759-1FA4D56CA1AB}
+	EndGlobalSection
+EndGlobal
