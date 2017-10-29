@@ -26,12 +26,14 @@ namespace XboxControllerMouse.Library.Controller
         public float LeftTrigger { get; private set; }
         public float RightTrigger { get; private set; }
 
+        public bool IsLeftThumbButton { get; set; }
+        public bool IsRightThumbButton { get; set; }
         public bool IsX { get; private set; }
         public bool IsY { get; private set; }
         public bool IsA { get; private set; }
         public bool IsB { get; private set; }
         public bool IsStart { get; private set; }
-        public bool IsSelect { get; private set; }
+        public bool IsBack { get; private set; }
         public bool IsRightBumper { get; private set; }
         public bool IsLeftBumper { get; private set; }
 
@@ -68,10 +70,13 @@ namespace XboxControllerMouse.Library.Controller
                 IsDPadDown = gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadDown);
                 IsDPadLeft = gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadLeft);
                 IsDPadRight = gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadRight);
-                IsDPadLeft = gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadUp);
+                IsDPadUp= gamepad.Buttons.HasFlag(GamepadButtonFlags.DPadUp);
 
-                IsSelect = gamepad.Buttons.HasFlag(GamepadButtonFlags.Back);
+                IsBack = gamepad.Buttons.HasFlag(GamepadButtonFlags.Back);
                 IsStart = gamepad.Buttons.HasFlag(GamepadButtonFlags.Start);
+
+                IsLeftThumbButton = gamepad.Buttons.HasFlag(GamepadButtonFlags.LeftThumb);
+                IsRightThumbButton = gamepad.Buttons.HasFlag(GamepadButtonFlags.RightThumb);
             }
         }
     }

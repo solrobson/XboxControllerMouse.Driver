@@ -13,7 +13,7 @@ namespace XboxControllerMouse.Library.Controller
         bool IsDPadUp { get; }
         bool IsLeftBumper { get; }
         bool IsRightBumper { get; }
-        bool IsSelect { get; }
+        bool IsBack { get; }
         bool IsStart { get; }
         bool IsX { get; }
         bool IsY { get; }
