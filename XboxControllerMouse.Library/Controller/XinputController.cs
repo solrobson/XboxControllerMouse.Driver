@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SharpDX.XInput;
 using System.Drawing;
+using XboxControllerMouse.Library.Configuration;
 
 namespace XboxControllerMouse.Library.Controller
 {
@@ -21,12 +22,15 @@ namespace XboxControllerMouse.Library.Controller
             }
         }
 
+        
         public Point LeftThumb { get; private set; }
         public Point RightThumb { get; private set; }
         public float LeftTrigger { get; private set; }
         public float RightTrigger { get; private set; }
 
+        [ConfigKey("righttrigger")]
         public bool IsLeftThumbButton { get; set; }
+
         public bool IsRightThumbButton { get; set; }
         public bool IsX { get; private set; }
         public bool IsY { get; private set; }

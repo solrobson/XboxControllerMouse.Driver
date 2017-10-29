@@ -1,12 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XboxControllerMouse.Library.Controller;
-using XboxControllerMouse.Library.Mouse;
+﻿using XboxControllerMouse.Library.Controller;
 using System.Windows.Forms;
-using System.Reflection;
-using XboxControllerMouse.Library.Actions;
 using System.Configuration;
 using System;
 using XboxControllerMouse.Library.Configuration;
@@ -40,12 +33,12 @@ namespace XboxControllerMouse.Library
 
                 if (!mouseMode)
                 {
-                    System.Threading.Thread.Sleep(500);
+                    System.Threading.Thread.Sleep(turnOffReadRate);
                     continue;
                 }
 
-                p.x = controller.LeftThumb.X / 2000;
-                p.y = controller.LeftThumb.Y / 2000;
+                p.x = controller.LeftThumb.X / mouseSensitivity;
+                p.y = controller.LeftThumb.Y / mouseSensitivity;
 
 
                 Cursor c = new Cursor(Cursor.Current.Handle);
@@ -54,12 +47,12 @@ namespace XboxControllerMouse.Library
                 currentPosition.X += p.x;
                 currentPosition.Y -= p.y;
 
-                if (controller.RightTrigger == 255)
+                if (controller.RightTrigger == triggerSensitivity)
                 {
                     XInputControllerManager.ExecuteAction(InputNamesConstants.RightTrigger);
                 }
 
-                if (controller.LeftTrigger == 255)
+                if (controller.LeftTrigger == triggerSensitivity)
                 {
                     XInputControllerManager.ExecuteAction(InputNamesConstants.LeftTrigger);
                 }
@@ -135,8 +128,7 @@ namespace XboxControllerMouse.Library
                 }
 
                 Mouse.Mouse.SetCursorPos(currentPosition.X, currentPosition.Y);
-                System.Threading.Thread.Sleep(20);
-
+                System.Threading.Thread.Sleep(updateReadRate);
             }
         }
     }
